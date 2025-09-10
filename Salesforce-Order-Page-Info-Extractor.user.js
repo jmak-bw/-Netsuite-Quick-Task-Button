@@ -1,11 +1,13 @@
 // ==UserScript==
-// @name        Salesforce Order Page Extractor ***
-// @namespace   http://tampermonkey.net/
-// @version     0.1
-// @description Extract contract references safely
-// @match       https://*.lightning.force.com/*
-// @grant       none
-// @run-at      document-start
+// @name         Salesforce Order Page Info Extractor
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Extract contract references safely
+// @match        https://*.lightning.force.com/*
+// @grant        none
+// @run-at       document-start
+// @updateURL    https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Salesforce-Order-Page-Info-Extractor.user.js
+// @downloadURL  https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Salesforce-Order-Page-Info-Extractor.user.js
 // ==/UserScript==
 
 (function () {
