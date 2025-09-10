@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [Netsuite] Visual aid for items on transaction page
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Highlight rows based on Back Ordered and Fulfilled; highlight Invoiced column green if fully invoiced; skip rows with empty Available; show summary counts above table
 // @author       JSM
 // @match        https://*.app.netsuite.com/app/accounting/transactions/salesord.nl?id=*
