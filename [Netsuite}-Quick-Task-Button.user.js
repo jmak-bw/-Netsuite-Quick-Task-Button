@@ -8,6 +8,8 @@
 // @match        https://*.netsuite.com/app/common/item/*
 // @grant        GM_addStyle
 // @run-at       document-idle
+// @updateURL    
+// @downloadURL  
 // ==/UserScript==
 
 (function() {
