@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Netsuite: Autofill "XX-BWUK-2025-" & Resize Search bar and Role [WORKING]
+// @name         [Netsuite]Autofill Search Bar
 // @namespace    http://tampermonkey.net/
-// @version      0.6
+// @version      1.0
 // @description  Autofills search box based buttons and resize search bar and role buttons (responsive absolute positioning)
 // @author       You
 // @match        https://*.app.netsuite.com/*
