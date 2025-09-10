@@ -8,8 +8,8 @@
 // @match        https://*.netsuite.com/app/common/item/*
 // @grant        GM_addStyle
 // @run-at       document-idle
-// @updateURL    https://github.com/jmak-bw/TampermonkeyScriptsJSM/blob/main/Netsuite-Quick-Task-Button.user.js?raw=true
-// @downloadURL  https://github.com/jmak-bw/TampermonkeyScriptsJSM/blob/main/Netsuite-Quick-Task-Button.user.js?raw=true
+// @updateURL    https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Netsuite-Quick-Task-Button.user.js
+// @downloadURL  https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Netsuite-Quick-Task-Button.user.js
 // ==/UserScript==
 
 // Updated for testing (10/09/2025 @ 16:56)
