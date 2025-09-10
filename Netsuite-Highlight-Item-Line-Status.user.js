@@ -8,6 +8,8 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=netsuite.com
 // @grant        GM_addStyle
 // @run-at       document-idle
+// @updateURL    https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Netsuite-Highlight-Item-Line-Status.user.js
+// @downloadURL  https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Netsuite-Highlight-Item-Line-Status.user.js
 // ==/UserScript==
 
 (function () {
