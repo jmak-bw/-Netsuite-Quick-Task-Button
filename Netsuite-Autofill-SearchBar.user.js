@@ -7,6 +7,8 @@
 // @match        https://*.app.netsuite.com/*
 // @grant        GM_addStyle
 // @run-at       document-idle
+// @updateURL    https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Netsuite-Autofill-SearchBar.user.js
+// @downloadURL  https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Netsuite-Autofill-SearchBar.user.js
 // ==/UserScript==
 
 (function() {
