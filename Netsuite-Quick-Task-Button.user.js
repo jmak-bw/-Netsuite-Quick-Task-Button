@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Netsuite: Quick Task Button [WORKING]
+// @name         [Netsuite]Quick Task Button
 // @namespace    http://tampermonkey.net/
 // @version      0.2
 // @description  Adds a "Task" button for transactions and item records
@@ -8,8 +8,8 @@
 // @match        https://*.netsuite.com/app/common/item/*
 // @grant        GM_addStyle
 // @run-at       document-idle
-// @updateURL    https://github.com/jmak-bw/-Netsuite-Quick-Task-Button/raw/refs/heads/main/%5BNetsuite%7D-Quick-Task-Button.user.js
-// @downloadURL  
+// @updateURL    https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/[Netsuite]-Quick-Task-Button.user.js
+// @downloadURL  https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/[Netsuite]-Quick-Task-Button.user.js
 // ==/UserScript==
 
 (function() {
