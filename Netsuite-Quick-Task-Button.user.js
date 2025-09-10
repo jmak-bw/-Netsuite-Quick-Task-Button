@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.2
 // @description  Adds a "Task" button for transactions and item records
-// @author       jmak
+// @author       JSM
 // @match        https://*.netsuite.com/app/accounting/*
 // @match        https://*.netsuite.com/app/common/item/*
 // @grant        GM_addStyle
