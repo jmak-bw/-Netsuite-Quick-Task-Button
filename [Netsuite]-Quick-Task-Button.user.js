@@ -8,7 +8,7 @@
 // @match        https://*.netsuite.com/app/common/item/*
 // @grant        GM_addStyle
 // @run-at       document-idle
-// @updateURL    
+// @updateURL    https://github.com/jmak-bw/-Netsuite-Quick-Task-Button/raw/refs/heads/main/%5BNetsuite%7D-Quick-Task-Button.user.js
 // @downloadURL  
 // ==/UserScript==
 
