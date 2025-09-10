@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Autofills search box based buttons and resize search bar and role buttons (responsive absolute positioning)
-// @author       You
+// @author       JSM
 // @match        https://*.app.netsuite.com/*
 // @grant        GM_addStyle
 // @run-at       document-idle
