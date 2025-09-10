@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      4.1
 // @description  Adds shortcuts to Netsuite task pages.
-// @author       jmak
+// @author       JSM
 // @match        https://*.netsuite.com/app/crm/calendar/task.nl?l=T&*
 // @grant        GM_addStyle
 // @run-at       document-idle
