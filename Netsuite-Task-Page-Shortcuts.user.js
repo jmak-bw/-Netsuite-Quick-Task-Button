@@ -1,12 +1,14 @@
 // ==UserScript==
-// @name         Netsuite: Task page tools [Updated 10-09-2025]
+// @name         [Netsuite] Task Page Shortcuts
 // @namespace    http://tampermonkey.net/
 // @version      4.1
-// @description  Trying to put two scripts in one. Wish me luck. Will now check current and previous years.
+// @description  Adds shortcuts to Netsuite task pages.
 // @author       jmak
 // @match        https://*.netsuite.com/app/crm/calendar/task.nl?l=T&*
 // @grant        GM_addStyle
 // @run-at       document-idle
+// @updateURL    https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Netsuite-Task-Page-Shortcuts.user.js
+// @downloadURL  https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Netsuite-Task-Page-Shortcuts.user.js
 // ==/UserScript==
 
 (function() {
