@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Salesforce Order Page Info Extractor
+// @name         [Salesforce] Order Page Info Extractor
 // @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      0.1.2
 // @description  Extract contract references, Branch, and description from order page
 // @author       JSM
 // @match        https://*.lightning.force.com/*
