@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [Netsuite]Quick Task Button
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.2.1
 // @description  Adds a "Task" button for transactions and item records
 // @author       JSM
 // @match        https://*.netsuite.com/app/accounting/*
