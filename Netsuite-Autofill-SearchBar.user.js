@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [Netsuite]Autofill Search Bar
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Autofills search box based buttons and resize search bar and role buttons (responsive absolute positioning)
 // @author       JSM
 // @match        https://*.app.netsuite.com/*
