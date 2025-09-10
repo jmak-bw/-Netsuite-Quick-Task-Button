@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Highlight rows based on Back Ordered and Fulfilled; highlight Invoiced column green if fully invoiced; skip rows with empty Available; show summary counts above table
-// @author       You
+// @author       JSM
 // @match        https://*.app.netsuite.com/app/accounting/transactions/salesord.nl?id=*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=netsuite.com
 // @grant        GM_addStyle
