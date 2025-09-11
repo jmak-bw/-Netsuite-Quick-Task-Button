@@ -48,64 +48,59 @@
 
     };
 
+    // Helper to grab the transaction element no matter the profile
+    function getTransactionElement() {
+        if (document.getElementById('transaction_display')) {
+            return { element: document.getElementById('transaction_display'), source: 'transaction_display' };
+        }
+        if (document.querySelector('input[name="inpt_transaction"]')) {
+            const el = document.querySelector('input[name="inpt_transaction"]');
+            return { element: el, source: el.id || 'name=inpt_transaction' };
+        }
+        if (document.getElementById('inpt_transaction_9')) {
+            return { element: document.getElementById('inpt_transaction_9'), source: 'inpt_transaction_9' };
+        }
+        if (document.getElementById('inpt_transaction_12')) {
+            return { element: document.getElementById('inpt_transaction_12'), source: 'inpt_transaction_12' };
+        }
+        return null;
+    }
 
-
-    // Function to extract SOID from the inpt_transaction_9 input field
+    // Function to extract SOID
     function extractSOID() {
         console.log("extractSOID: Running... ", new Date().toLocaleString());
 
-        // Try to get the transaction_display element first
-        let transactionDisplayElement = document.getElementById('transaction_display');
+        let result = getTransactionElement();
 
-        // If not found, fallback to inpt_transaction_9
-        if (!transactionDisplayElement) {
-            transactionDisplayElement = document.getElementById('inpt_transaction_9');
-        }
+        if (result && result.element) {
+            SOID = result.element.value;
+            console.log(`extractSOID: Success. Extracted from [${result.source}] →`, SOID);
 
-        // If still not found, fallback to inpt_transaction_12
-        if (!transactionDisplayElement) {
-            transactionDisplayElement = document.getElementById('inpt_transaction_12');
-        }
-
-        if (transactionDisplayElement) {
-            SOID = transactionDisplayElement.value;
-            console.log('extractSOID: Success. Extracted value:', SOID);
-
-            // Check if SOID contains "Work Order"
+            // 🔽 your existing parsing logic stays the same 🔽
             if (SOID.includes("Work Order")) {
                 const match = SOID.match(/Work Order #(\d+)/);
                 if (match) {
-                    SOID = "WO #" + match[1];  // Update with "WO" + number
+                    SOID = "WO #" + match[1];
                     console.log('extractSOID: Complete. Updated SOID for Work Order:', SOID);
-                } else {
-                    console.log('extractSOID: Failed. No number found after "Work Order #"');
                 }
             }
-
-            // Check if SOID contains "Sales Order #SO-BWUK-2025-"
             else if (/Sales Order #SO-BWUK-\d{4}-/.test(SOID)) {
                 const match = SOID.match(/Sales Order #SO-BWUK-(\d{4})-(\d{5})/);
                 if (match) {
                     const year = parseInt(match[1], 10);
                     if (year <= currentYear) {
-                        SOID = "SO-" + match[2]; // Use last 5 digits
+                        SOID = "SO-" + match[2];
                         console.log(`extractSOID: Complete. Updated SOID for Sales Order (${year}):`, SOID);
-                    } else {
-                        console.log(`extractSOID: Ignored future year (${year}).`);
                     }
                 }
             }
-            // Check if SOID contains "Sales Order #SO<4-digit number>"
             else if (SOID.match(/Sales Order #SO\d{4}/)) {
                 const match = SOID.match(/Sales Order #SO(\d{4})/);
                 if (match) {
                     SOID = "SO-" + match[1];
                     console.log('extractSOID: Complete. Updated SOID for Sales Order (4-digit):', SOID);
-                } else {
-                    console.log('extractSOID: Failed. No matching number found after "Sales Order #SO"');
                 }
             }
-            // Invoice
             else if (/Invoice #INV-BWUK-\d{4}-/.test(SOID)) {
                 const match = SOID.match(/Invoice #INV-BWUK-(\d{4})-(\d{5})/);
                 if (match) {
@@ -116,8 +111,6 @@
                     }
                 }
             }
-
-            // Purchase Order
             else if (/Purchase Order #PO-BWUK-\d{4}-/.test(SOID)) {
                 const match = SOID.match(/Purchase Order #PO-BWUK-(\d{4})-(\d{5})/);
                 if (match) {
@@ -128,17 +121,13 @@
                     }
                 }
             }
-            // Check if SOID contains "Inventory Transfer #"
             else if (SOID.includes("Inventory Transfer #")) {
                 const match = SOID.match(/Inventory Transfer #IT(\d{3})/);
                 if (match) {
-                    SOID = "Inventory Transfer #IT" + match[1];  // Update with "Inventory Transfer #" + last 3 digits
+                    SOID = "Inventory Transfer #IT" + match[1];
                     console.log('extractSOID: Complete. Updated SOID for Inventory Transfer:', SOID);
-                } else {
-                    console.log('extractSOID: Failed. No number found after "Inventory Transfer"');
                 }
             }
-            // Return Authorisation
             else if (/Return Authorisation #RMA-BWUK-\d{4}-/.test(SOID)) {
                 const match = SOID.match(/Return Authorisation #RMA-BWUK-(\d{4})-(\d{5})/);
                 if (match) {
@@ -150,17 +139,11 @@
                 }
             }
         } else {
-            console.log('extractSOID: transaction_display and inpt_transaction_9 not found.');
-        }
-
-        // Fallback if SOID is still null/empty
-        if (!SOID) {
+            console.log('extractSOID: No transaction field found. Falling back to relateditem_display.');
             const relatedItemElement = document.getElementById('relateditem_display');
             if (relatedItemElement) {
                 itemTitle = relatedItemElement.value;
                 console.log('extractSOID: Fallback success. Extracted itemTitle:', itemTitle);
-            } else {
-                console.log('extractSOID: Fallback failed. relateditem_display not found.');
             }
         }
     }
