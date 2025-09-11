@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [Salesforce] Order Page Info Extractor
 // @namespace    http://tampermonkey.net/
-// @version      0.1.2.1
+// @version      0.1.3
 // @description  Extract contract references, Branch, and description from order page
 // @author       JSM
 // @match        https://*.lightning.force.com/*
@@ -20,6 +20,7 @@
     let projectResults = [];
     let descriptionResults = [];
     let branchResults = [];
+    let soResults = [];
 
     // Inject CSS for animation and layout
     const style = document.createElement('style');
@@ -111,10 +112,12 @@
         const project = projectResults[0] || '';
         const branch = branchResults[0] || '';
         const description = descriptionResults[0] || '';
+        const so = soResults[0] || '';
         floatingBox.querySelector('.sf-floating-content').innerHTML = `
             <div><span class="sf-floating-box-label">Contract:</span> <span class="copyable">${contract}</span></div>
             <div><span class="sf-floating-box-label">Project:</span> <span class="copyable">${project}</span></div>
             <div><span class="sf-floating-box-label">Branch:</span> <span class="copyable">${branch}</span></div>
+            <div><span class="sf-floating-box-label">SO:</span> <span class="copyable">${so}</span></div>
             <div><span class="sf-floating-box-label">Description:</span> <span class="copyable">${description}</span></div>
         `;
         // Add click-to-copy
@@ -145,6 +148,7 @@
                         projectResults = [];
                         descriptionResults = [];
                         branchResults = [];
+                        soResults = [];
                         if (json.actions && Array.isArray(json.actions)) {
                             json.actions.forEach((action) => {
                                 try {
@@ -153,15 +157,18 @@
                                     const project = fields.ORD_Affaire__r?.displayValue || '';
                                     const description = fields.ORD_Description_complementaire__c?.value || '';
                                     const branch = fields.ORD_Agence_Regionale_BW__c?.displayValue || '';
+                                    const so = fields.celigo_sfnsio__NetSuite_Order_Number__c.value || '';
                                     contractResults.push(desc);
                                     projectResults.push(project);
                                     descriptionResults.push(description);
                                     branchResults.push(branch);
+                                    soResults.push(so);
                                 } catch (e) {
                                     contractResults.push('');
                                     projectResults.push('');
                                     descriptionResults.push('');
                                     branchResults.push('');
+                                    soResults.push('');
                                 }
                             });
                             window.updateContractFloatingBox();
