@@ -3,10 +3,12 @@
 // @namespace    http://tampermonkey.net/
 // @version      3.1
 // @description  Trying to put two scripts in one. Wish me luck.
-// @author       You
+// @author       JSM
 // @match        https://*.netsuite.com/app/crm/calendar/task.nl?l=T&*
 // @grant        GM_addStyle
 // @run-at       docment-idle
+// @updateURL    https://raw.githubusercontent.com/jmak-bw/MK/Netsuite-Task-Page-Shortcuts-MK
+// @downloadURL  https://raw.githubusercontent.com/jmak-bw/MK/Netsuite-Task-Page-Shortcuts-MK
 // ==/UserScript==
 
 (function() {
