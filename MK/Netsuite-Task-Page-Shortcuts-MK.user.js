@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [Netsuite] Task Page Shortcuts (MK)
 // @namespace    http://tampermonkey.net/
-// @version      3.1.1
+// @version      3.2.1
 // @description  Trying to put two scripts in one. Wish me luck.
 // @author       JSM
 // @match        https://*.netsuite.com/app/crm/calendar/task.nl?l=T&*
