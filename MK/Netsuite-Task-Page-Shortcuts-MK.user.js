@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         [Netsuite] Task Page Shortcuts
+// @name         [Netsuite] Task Page Shortcuts (MK)
 // @namespace    http://tampermonkey.net/
 // @version      4.3
 // @description  Adds shortcuts to Netsuite task pages.
