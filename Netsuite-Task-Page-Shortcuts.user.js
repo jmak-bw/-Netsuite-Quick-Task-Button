@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [Netsuite] Task Page Shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      4.2
+// @version      4.3
 // @description  Adds shortcuts to Netsuite task pages.
 // @author       JSM
 // @match        https://*.netsuite.com/app/crm/calendar/task.nl?l=T&*
@@ -60,6 +60,11 @@
         // If not found, fallback to inpt_transaction_9
         if (!transactionDisplayElement) {
             transactionDisplayElement = document.getElementById('inpt_transaction_9');
+        }
+
+        // If still not found, fallback to inpt_transaction_12
+        if (!transactionDisplayElement) {
+            transactionDisplayElement = document.getElementById('inpt_transaction_12');
         }
 
         if (transactionDisplayElement) {
