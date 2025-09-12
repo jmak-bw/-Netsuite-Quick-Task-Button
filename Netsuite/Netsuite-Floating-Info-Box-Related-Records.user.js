@@ -1,13 +1,13 @@
 // ==UserScript==
-// @name         [Salesforce] Floating Info Button
+// @name         [Netsuite] Floating Info Button
 // @version      1.0
 // @description  Floating button to display extracted info from #links_splits table
 // @match        https://*.app.netsuite.com/app/accounting/transactions/salesord.nl?id=*
 // @author       JSM
 // @grant        none
 // @run-at       document-idle
-// @updateURL    https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Salesforce/Salesforce-Floating-Info-Box-Related-Records.user.js
-// @downloadURL  https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Salesforce/Salesforce-Floating-Info-Box-Related-Records.user.js
+// @updateURL    https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Netsuite/Netsuite-Floating-Info-Box-Related-Records.user.js
+// @downloadURL  https://raw.githubusercontent.com/jmak-bw/TampermonkeyScriptsJSM/main/Netsuite/Netsuite-Floating-Info-Box-Related-Records.user.js
 // ==/UserScript==
 
 (function () {
