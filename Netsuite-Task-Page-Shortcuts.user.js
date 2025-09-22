@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [Netsuite] Task Page Shortcuts
 // @namespace    http://tampermonkey.net/
-// @version      4.3
+// @version      4.4
 // @description  Adds shortcuts to Netsuite task pages.
 // @author       JSM
 // @match        https://*.netsuite.com/app/crm/calendar/task.nl?l=T&*
@@ -179,8 +179,8 @@
         let button = document.createElement("button");
         button.innerText = "Fill";
         button.style.position = "absolute";
-        button.style.top = "203px";
-        button.style.left = "295px";
+        button.style.top = "206px";
+        button.style.left = "315px";
         button.style.zIndex = "9999"; // Ensure it stays on top
         button.style.background = "#007bff";
         button.style.color = "white";
@@ -346,9 +346,9 @@
             const updateButton = document.createElement('button');
             updateButton.innerHTML = 'Update';  // Break the text into two lines using <br>
             updateButton.style.position = 'absolute';
-            updateButton.style.top = '482px';
-            updateButton.style.left = '320px';
-            updateButton.style.padding = '5px 10px';  // Smaller padding for a smaller button
+            updateButton.style.top = '487px';
+            updateButton.style.left = '334px';
+            updateButton.style.padding = '5px 5px';  // Smaller padding for a smaller button
             updateButton.style.backgroundColor = '#ffa600';
             updateButton.style.color = 'white';
             updateButton.style.border = 'none';
